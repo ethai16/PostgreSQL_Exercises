@@ -43,3 +43,15 @@ SELECT * FROM restaurant where distance <= 2;
 SELECT * FROM restaurant where previousDine >= '2019-01-07' and previousDine < '2019-01-14';
 SELECT * FROM restaurant where (previousDine >= '2019-01-07' and previousDine < '2019-01-14') and stars = 5;
 
+--aggregation
+SELECT * FROM restaurant ORDER BY distance;
+
+SELECT * FROM restaurant ORDER BY distance LIMIT 2;
+
+SELECT * FROM restaurant WHERE distance < 2 ORDER BY stars DESC LIMIT 2;
+
+SELECT COUNT(*) FROM restaurant;
+
+SELECT COUNT(category) FROM restaurant;
+
+SELECT AVG(stars) FROM restaurant;
